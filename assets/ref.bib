@@ -1,0 +1,46 @@
+
+@inproceedings{icra24,
+  author={Tang, Ling and Jia, Yan-Bin and Xue, Yuechuan},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={Robotic Manipulation of Hand Tools: The Case of Screwdriving}, 
+  year={2024},
+  pages={13883-13890},
+  keywords={Geometry;Visualization;Hand tools;Dynamics;Kinematics;Fasteners;Joining processes},
+  doi={10.1109/ICRA57147.2024.10610831},
+  Address = {Yokohama, Japan},
+  file = {ICRA24.pdf},
+  abstract = {This paper investigates screwdriving by a robotic arm/hand pair, dealing with the chain of contacts connecting the substrate, screw, screwdriver, and fingertips. Considering rolling contacts and finger gaits, our force control scheme is derived through backward chaining to leverage the dynamics of the screwdriver and arm/hand. To maintain the fastening effort, estimations are carried out sequentially for the screwdriver's pose via optimization under visual and kinematic constraints, and for its applied wrench on the screw via solution drawing upon dynamics. This wrench, adjusted based on position/force feedback, is mapped by the grasp matrix to the desired fingertip forces, which are then used for computing torques to be exerted by the arm and hand to close the loop. Simulation and experiments with a Shadow Hand have been conducted for validations},
+}
+
+@inproceedings{iros23,
+  author={Xue, Yuechuan and Tang, Ling and Jia, Yan-Bin},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Dynamic Finger Gaits via Pivoting and Adapting Contact Forces}, 
+  year={2023},
+  pages={8784-8791},
+  keywords={Friction;Force;Dynamics;Planning;Intelligent robots},
+  doi={10.1109/IROS55552.2023.10342156},
+  Address = {Detroit, MI, USA},
+  file = {IROS23.pdf},
+  abstract = {This paper focuses on a single finger gait executed on a tool by an anthropomorphic hand driven by an arm. To improve stability, the tool's tip is leveraged as a pivot on the supporting plane. The gait consists of three stages: removal, during which the contact force on the gaiting finger gradually decreases to zero; relocation, during which the finger follows a pre-planned path (relative to the moving object) to establish a new contact; and addition, during which the contact force on the relocated finger increases to some desired level. Hybrid position/impedance control employ reference finger forces that satisfy the friction cone constraints and are dynamically consistent with the object's motion, which in turn provides reference poses for the fingertips to maintain their contacts during the gait. Finger gaits have been demonstrated on a kitchen knife and a screwdriver with an Adept SCARA robot and a Shadow Dexterous Hand.},
+}
+
+@inproceedings{icra23,
+    Author = {Tang, Ling and Jia, Yan-Bin},
+    Title = {Robotic fastening with a manual screwdriver},
+    Booktitle = {2023 IEEE International Conference on Robotics and Automation (ICRA)},
+    pages={5269-5275},
+    keywords={Hand tools;Simulation;Manuals;Fasteners;Turning;Manipulators;Impedance},
+    doi={10.1109/ICRA48891.2023.10161139},
+    Address = {London, UK},
+    file = {ICRA23.pdf},
+    abstract = {This paper takes a first step to investigate how a robotic arm mounts a rigidly attached screwdriver onto a screw (pre-mounted in a tapped hole) and then tightens it using the tool. Mounting begins with sliding the screwdriver tip on the screw head along preplanned paths to search for the drive and follows with rotating the screwdriver to drop the tip into the drive. Prevention of a slip off the screw head is achieved via impedance control to install a "virtual fence" along its boundary. Turning of the screw is conducted via hybrid position/admittance control based on modeling the reaction force between the screw and the substrate. Simulation results with a KUKA Arm demonstrate the smoothness of the entire action.},
+}
+
+@unpublished{feynman06,
+    Author = {Jia, Yan-Bin and Xue, Yuechuan and Tang, Ling},
+    Title = {Patch Tree: Exploiting the Gauss Map and Principal Component Analysis for Robotic Grasping},
+    Note = {Submitted to 2025 IEEE International Conference on Robotics and Automation (ICRA)},
+    abstract = {Grasp planning must consider an object's local geometry (at the finger contacts), for the range of applicable wrenches under friction, and its global geometry, for force closure and grasp quality. Most everyday objects have curved surfaces unamenable to a pure combinatorial approach but treatable with tools from differential geometry. Our idea is to "discretize" such a surface in a top-down fashion into elementary patches (e-patches), each consisting of points that would yield close enough wrenches. Preprocessing based on Gaussian curvature decomposes the surface into strictly convex, strictly concave, ruled, and saddle patches. The Gauss map guides the subdivision of any patch with a large variation in the contact force direction, with the aid of a Platonic solid. The principal component analysis (PCA) further subdivides any patch that has a large variation in torque. The final structure is called a patch tree, which stores e-patches at its leaves, and force or torque ranges at its internal nodes. Grasp synthesis and optimization operates on the patch tree with a stack to efficiently prune away non-promising finger placements. Simulation and experiment with a Shadow Hand have been conducted over everyday items. The patch tree exhibits different levels of surface granularity. It has a good promise for efficient planning of finger gaits to carry out grasping and tool manipulation.},
+}
+
